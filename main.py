@@ -113,9 +113,11 @@ def format_time_duration(duration):
 
 # Вывод списка файлов, которые соответствуют условиям
 if files_exceeding_20_hours:
-    print("Файлы, где значение 'UT101_U' превышает 300 более 20 часов без промывки:")
+    # print("Файлы, где значение 'UT101_U' превышает 300 более 20 часов без промывки:")
     for f, (start, end, duration) in zip(files_exceeding_20_hours, exceeding_periods):
         formatted_duration = format_time_duration(duration)
-        print(f"{f}: Начало работы: {start.strftime('%Y-%m-%d %H:%M')}, Конец работы: {end.strftime('%Y-%m-%d %H:%M')}, Длительность работы без промывки: {formatted_duration}")
+        # print(f"{f}: Начало работы: {start.strftime('%Y-%m-%d %H:%M')}, Конец работы: {end.strftime('%Y-%m-%d %H:%M')}, Длительность работы без промывки: {formatted_duration}")
+        print(f"Начало работы: {start.strftime('%Y-%m-%d %H:%M')}, Длительность работы без промывки: {formatted_duration}")
+
 else:
     print("Нет файлов, соответствующих условиям.")
